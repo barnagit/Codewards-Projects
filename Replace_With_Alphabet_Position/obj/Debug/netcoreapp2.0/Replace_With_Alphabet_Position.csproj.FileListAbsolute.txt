@@ -1,0 +1,10 @@
+C:\Users\barnabas.hajzer\Codewars-Projects\Replace_With_Alphabet_Position\bin\Debug\netcoreapp2.0\Replace_With_Alphabet_Position.deps.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Replace_With_Alphabet_Position\bin\Debug\netcoreapp2.0\Replace_With_Alphabet_Position.runtimeconfig.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Replace_With_Alphabet_Position\bin\Debug\netcoreapp2.0\Replace_With_Alphabet_Position.runtimeconfig.dev.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Replace_With_Alphabet_Position\bin\Debug\netcoreapp2.0\Replace_With_Alphabet_Position.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Replace_With_Alphabet_Position\bin\Debug\netcoreapp2.0\Replace_With_Alphabet_Position.pdb
+C:\Users\barnabas.hajzer\Codewars-Projects\Replace_With_Alphabet_Position\obj\Debug\netcoreapp2.0\Replace_With_Alphabet_Position.csproj.CoreCompileInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Replace_With_Alphabet_Position\obj\Debug\netcoreapp2.0\Replace_With_Alphabet_Position.AssemblyInfoInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Replace_With_Alphabet_Position\obj\Debug\netcoreapp2.0\Replace_With_Alphabet_Position.AssemblyInfo.cs
+C:\Users\barnabas.hajzer\Codewars-Projects\Replace_With_Alphabet_Position\obj\Debug\netcoreapp2.0\Replace_With_Alphabet_Position.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Replace_With_Alphabet_Position\obj\Debug\netcoreapp2.0\Replace_With_Alphabet_Position.pdb
