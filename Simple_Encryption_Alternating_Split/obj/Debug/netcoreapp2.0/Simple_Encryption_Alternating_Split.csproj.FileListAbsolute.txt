@@ -1,0 +1,10 @@
+C:\Users\barnabas.hajzer\Codewars-Projects\Simple_Encryption_Alternating_Split\bin\Debug\netcoreapp2.0\Simple_Encryption_Alternating_Split.deps.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Simple_Encryption_Alternating_Split\bin\Debug\netcoreapp2.0\Simple_Encryption_Alternating_Split.runtimeconfig.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Simple_Encryption_Alternating_Split\bin\Debug\netcoreapp2.0\Simple_Encryption_Alternating_Split.runtimeconfig.dev.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Simple_Encryption_Alternating_Split\bin\Debug\netcoreapp2.0\Simple_Encryption_Alternating_Split.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Simple_Encryption_Alternating_Split\bin\Debug\netcoreapp2.0\Simple_Encryption_Alternating_Split.pdb
+C:\Users\barnabas.hajzer\Codewars-Projects\Simple_Encryption_Alternating_Split\obj\Debug\netcoreapp2.0\Simple_Encryption_Alternating_Split.csproj.CoreCompileInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Simple_Encryption_Alternating_Split\obj\Debug\netcoreapp2.0\Simple_Encryption_Alternating_Split.AssemblyInfoInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Simple_Encryption_Alternating_Split\obj\Debug\netcoreapp2.0\Simple_Encryption_Alternating_Split.AssemblyInfo.cs
+C:\Users\barnabas.hajzer\Codewars-Projects\Simple_Encryption_Alternating_Split\obj\Debug\netcoreapp2.0\Simple_Encryption_Alternating_Split.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Simple_Encryption_Alternating_Split\obj\Debug\netcoreapp2.0\Simple_Encryption_Alternating_Split.pdb
