@@ -1,0 +1,10 @@
+C:\Users\barnabas.hajzer\Codewars-Projects\Take_a_Ten_Minute_Walk\bin\Debug\netcoreapp2.0\Take_a_Ten_Minute_Walk.deps.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Take_a_Ten_Minute_Walk\bin\Debug\netcoreapp2.0\Take_a_Ten_Minute_Walk.runtimeconfig.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Take_a_Ten_Minute_Walk\bin\Debug\netcoreapp2.0\Take_a_Ten_Minute_Walk.runtimeconfig.dev.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Take_a_Ten_Minute_Walk\bin\Debug\netcoreapp2.0\Take_a_Ten_Minute_Walk.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Take_a_Ten_Minute_Walk\bin\Debug\netcoreapp2.0\Take_a_Ten_Minute_Walk.pdb
+C:\Users\barnabas.hajzer\Codewars-Projects\Take_a_Ten_Minute_Walk\obj\Debug\netcoreapp2.0\Take_a_Ten_Minute_Walk.csproj.CoreCompileInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Take_a_Ten_Minute_Walk\obj\Debug\netcoreapp2.0\Take_a_Ten_Minute_Walk.AssemblyInfoInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Take_a_Ten_Minute_Walk\obj\Debug\netcoreapp2.0\Take_a_Ten_Minute_Walk.AssemblyInfo.cs
+C:\Users\barnabas.hajzer\Codewars-Projects\Take_a_Ten_Minute_Walk\obj\Debug\netcoreapp2.0\Take_a_Ten_Minute_Walk.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Take_a_Ten_Minute_Walk\obj\Debug\netcoreapp2.0\Take_a_Ten_Minute_Walk.pdb
