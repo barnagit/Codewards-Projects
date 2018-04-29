@@ -1,0 +1,10 @@
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Highest_Scoring_Word/bin/Debug/netcoreapp2.0/Highest_Scoring_Word.deps.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Highest_Scoring_Word/bin/Debug/netcoreapp2.0/Highest_Scoring_Word.runtimeconfig.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Highest_Scoring_Word/bin/Debug/netcoreapp2.0/Highest_Scoring_Word.runtimeconfig.dev.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Highest_Scoring_Word/bin/Debug/netcoreapp2.0/Highest_Scoring_Word.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Highest_Scoring_Word/bin/Debug/netcoreapp2.0/Highest_Scoring_Word.pdb
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Highest_Scoring_Word/obj/Debug/netcoreapp2.0/Highest_Scoring_Word.csproj.CoreCompileInputs.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Highest_Scoring_Word/obj/Debug/netcoreapp2.0/Highest_Scoring_Word.AssemblyInfoInputs.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Highest_Scoring_Word/obj/Debug/netcoreapp2.0/Highest_Scoring_Word.AssemblyInfo.cs
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Highest_Scoring_Word/obj/Debug/netcoreapp2.0/Highest_Scoring_Word.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Highest_Scoring_Word/obj/Debug/netcoreapp2.0/Highest_Scoring_Word.pdb
