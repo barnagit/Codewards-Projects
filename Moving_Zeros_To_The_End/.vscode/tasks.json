@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Moving_Zeros_To_The_End.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

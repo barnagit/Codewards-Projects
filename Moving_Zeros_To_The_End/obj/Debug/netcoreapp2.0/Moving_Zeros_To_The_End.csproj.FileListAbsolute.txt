@@ -1,0 +1,10 @@
+C:\Users\barnabas.hajzer\Codewars-Projects\Moving_Zeros_To_The_End\bin\Debug\netcoreapp2.0\Moving_Zeros_To_The_End.deps.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Moving_Zeros_To_The_End\bin\Debug\netcoreapp2.0\Moving_Zeros_To_The_End.runtimeconfig.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Moving_Zeros_To_The_End\bin\Debug\netcoreapp2.0\Moving_Zeros_To_The_End.runtimeconfig.dev.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Moving_Zeros_To_The_End\bin\Debug\netcoreapp2.0\Moving_Zeros_To_The_End.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Moving_Zeros_To_The_End\bin\Debug\netcoreapp2.0\Moving_Zeros_To_The_End.pdb
+C:\Users\barnabas.hajzer\Codewars-Projects\Moving_Zeros_To_The_End\obj\Debug\netcoreapp2.0\Moving_Zeros_To_The_End.csproj.CoreCompileInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Moving_Zeros_To_The_End\obj\Debug\netcoreapp2.0\Moving_Zeros_To_The_End.AssemblyInfoInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Moving_Zeros_To_The_End\obj\Debug\netcoreapp2.0\Moving_Zeros_To_The_End.AssemblyInfo.cs
+C:\Users\barnabas.hajzer\Codewars-Projects\Moving_Zeros_To_The_End\obj\Debug\netcoreapp2.0\Moving_Zeros_To_The_End.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Moving_Zeros_To_The_End\obj\Debug\netcoreapp2.0\Moving_Zeros_To_The_End.pdb
