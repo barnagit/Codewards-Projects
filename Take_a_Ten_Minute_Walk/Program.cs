@@ -10,11 +10,12 @@ namespace Take_a_Ten_Minute_Walk
             Console.WriteLine("Hello World!");
         }
 
-        private static int North_n_South = 0;
-        private static int West_n_East = 0;
+
         public static bool IsValidWalk(string[] walk)
         {
             if (walk.Length != 10) return false;
+            int North_n_South = 0;
+            int West_n_East = 0;
 
             foreach (string s in walk)
             {
