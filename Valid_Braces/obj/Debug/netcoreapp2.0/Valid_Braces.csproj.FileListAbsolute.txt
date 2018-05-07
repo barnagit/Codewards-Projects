@@ -1,0 +1,10 @@
+C:\Users\barnabas.hajzer\Codewars-Projects\Valid_Braces\obj\Debug\netcoreapp2.0\Valid_Braces.csproj.CoreCompileInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Valid_Braces\obj\Debug\netcoreapp2.0\Valid_Braces.AssemblyInfoInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Valid_Braces\obj\Debug\netcoreapp2.0\Valid_Braces.AssemblyInfo.cs
+C:\Users\barnabas.hajzer\Codewars-Projects\Valid_Braces\bin\Debug\netcoreapp2.0\Valid_Braces.deps.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Valid_Braces\bin\Debug\netcoreapp2.0\Valid_Braces.runtimeconfig.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Valid_Braces\bin\Debug\netcoreapp2.0\Valid_Braces.runtimeconfig.dev.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Valid_Braces\bin\Debug\netcoreapp2.0\Valid_Braces.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Valid_Braces\bin\Debug\netcoreapp2.0\Valid_Braces.pdb
+C:\Users\barnabas.hajzer\Codewars-Projects\Valid_Braces\obj\Debug\netcoreapp2.0\Valid_Braces.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Valid_Braces\obj\Debug\netcoreapp2.0\Valid_Braces.pdb
