@@ -1,0 +1,10 @@
+C:\Users\barnabas.hajzer\Codewars-Projects\Consecutive_strings\bin\Debug\netcoreapp2.0\Consecutive_strings.deps.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Consecutive_strings\bin\Debug\netcoreapp2.0\Consecutive_strings.runtimeconfig.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Consecutive_strings\bin\Debug\netcoreapp2.0\Consecutive_strings.runtimeconfig.dev.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Consecutive_strings\bin\Debug\netcoreapp2.0\Consecutive_strings.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Consecutive_strings\bin\Debug\netcoreapp2.0\Consecutive_strings.pdb
+C:\Users\barnabas.hajzer\Codewars-Projects\Consecutive_strings\obj\Debug\netcoreapp2.0\Consecutive_strings.csproj.CoreCompileInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Consecutive_strings\obj\Debug\netcoreapp2.0\Consecutive_strings.AssemblyInfoInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Consecutive_strings\obj\Debug\netcoreapp2.0\Consecutive_strings.AssemblyInfo.cs
+C:\Users\barnabas.hajzer\Codewars-Projects\Consecutive_strings\obj\Debug\netcoreapp2.0\Consecutive_strings.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Consecutive_strings\obj\Debug\netcoreapp2.0\Consecutive_strings.pdb
