@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/John_and_Ann_sign_up_for_Codewars.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

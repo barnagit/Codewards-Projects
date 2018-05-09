@@ -1,0 +1,10 @@
+C:\Users\barnabas.hajzer\Codewars-Projects\John_and_Ann_sign_up_for_Codewars\bin\Debug\netcoreapp2.0\John_and_Ann_sign_up_for_Codewars.deps.json
+C:\Users\barnabas.hajzer\Codewars-Projects\John_and_Ann_sign_up_for_Codewars\bin\Debug\netcoreapp2.0\John_and_Ann_sign_up_for_Codewars.runtimeconfig.json
+C:\Users\barnabas.hajzer\Codewars-Projects\John_and_Ann_sign_up_for_Codewars\bin\Debug\netcoreapp2.0\John_and_Ann_sign_up_for_Codewars.runtimeconfig.dev.json
+C:\Users\barnabas.hajzer\Codewars-Projects\John_and_Ann_sign_up_for_Codewars\bin\Debug\netcoreapp2.0\John_and_Ann_sign_up_for_Codewars.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\John_and_Ann_sign_up_for_Codewars\bin\Debug\netcoreapp2.0\John_and_Ann_sign_up_for_Codewars.pdb
+C:\Users\barnabas.hajzer\Codewars-Projects\John_and_Ann_sign_up_for_Codewars\obj\Debug\netcoreapp2.0\John_and_Ann_sign_up_for_Codewars.csproj.CoreCompileInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\John_and_Ann_sign_up_for_Codewars\obj\Debug\netcoreapp2.0\John_and_Ann_sign_up_for_Codewars.AssemblyInfoInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\John_and_Ann_sign_up_for_Codewars\obj\Debug\netcoreapp2.0\John_and_Ann_sign_up_for_Codewars.AssemblyInfo.cs
+C:\Users\barnabas.hajzer\Codewars-Projects\John_and_Ann_sign_up_for_Codewars\obj\Debug\netcoreapp2.0\John_and_Ann_sign_up_for_Codewars.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\John_and_Ann_sign_up_for_Codewars\obj\Debug\netcoreapp2.0\John_and_Ann_sign_up_for_Codewars.pdb
