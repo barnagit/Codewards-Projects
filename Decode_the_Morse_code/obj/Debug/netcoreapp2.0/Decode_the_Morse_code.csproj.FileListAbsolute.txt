@@ -1,0 +1,10 @@
+C:\Users\barnabas.hajzer\Codewars-Projects\Decode_the_Morse_code\bin\Debug\netcoreapp2.0\Decode_the_Morse_code.deps.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Decode_the_Morse_code\bin\Debug\netcoreapp2.0\Decode_the_Morse_code.runtimeconfig.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Decode_the_Morse_code\bin\Debug\netcoreapp2.0\Decode_the_Morse_code.runtimeconfig.dev.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Decode_the_Morse_code\bin\Debug\netcoreapp2.0\Decode_the_Morse_code.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Decode_the_Morse_code\bin\Debug\netcoreapp2.0\Decode_the_Morse_code.pdb
+C:\Users\barnabas.hajzer\Codewars-Projects\Decode_the_Morse_code\obj\Debug\netcoreapp2.0\Decode_the_Morse_code.csproj.CoreCompileInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Decode_the_Morse_code\obj\Debug\netcoreapp2.0\Decode_the_Morse_code.AssemblyInfoInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Decode_the_Morse_code\obj\Debug\netcoreapp2.0\Decode_the_Morse_code.AssemblyInfo.cs
+C:\Users\barnabas.hajzer\Codewars-Projects\Decode_the_Morse_code\obj\Debug\netcoreapp2.0\Decode_the_Morse_code.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Decode_the_Morse_code\obj\Debug\netcoreapp2.0\Decode_the_Morse_code.pdb
