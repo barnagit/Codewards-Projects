@@ -1,0 +1,11 @@
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Sum_Strings_as_Numbers/bin/Debug/netcoreapp2.0/Sum_Strings_as_Numbers.deps.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Sum_Strings_as_Numbers/bin/Debug/netcoreapp2.0/Sum_Strings_as_Numbers.runtimeconfig.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Sum_Strings_as_Numbers/bin/Debug/netcoreapp2.0/Sum_Strings_as_Numbers.runtimeconfig.dev.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Sum_Strings_as_Numbers/bin/Debug/netcoreapp2.0/Sum_Strings_as_Numbers.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Sum_Strings_as_Numbers/bin/Debug/netcoreapp2.0/Sum_Strings_as_Numbers.pdb
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Sum_Strings_as_Numbers/obj/Debug/netcoreapp2.0/Sum_Strings_as_Numbers.csproj.CoreCompileInputs.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Sum_Strings_as_Numbers/obj/Debug/netcoreapp2.0/Sum_Strings_as_Numbers.AssemblyInfoInputs.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Sum_Strings_as_Numbers/obj/Debug/netcoreapp2.0/Sum_Strings_as_Numbers.AssemblyInfo.cs
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Sum_Strings_as_Numbers/obj/Debug/netcoreapp2.0/Sum_Strings_as_Numbers.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Sum_Strings_as_Numbers/obj/Debug/netcoreapp2.0/Sum_Strings_as_Numbers.pdb
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Sum_Strings_as_Numbers/obj/Debug/netcoreapp2.0/Sum_Strings_as_Numbers.csprojResolveAssemblyReference.cache

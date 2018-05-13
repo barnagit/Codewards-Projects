@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Sum_Strings_as_Numbers.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
