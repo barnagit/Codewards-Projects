@@ -3,21 +3,155 @@ using System.Text;
 
 namespace Path_Finder_1.Src
 {
+ /*
     public enum Cardinals
     {
         Null, South, East, North, West
     }
+*/
+
+/*
     public struct Pos {
         public int sor;
         public int oszlop;
     }
+*/
 
-    public class Maze {
+    public enum Típus {
+        Fal = 0, Út = 1
+    }
+
+    public static class Irányít {
+        public static (int, int) jobbra((int,int) irány) {
+            var s = Convert.ToInt32(!Convert.ToBoolean(Math.Abs(irány.Item1)));
+            var o = Convert.ToInt32(!Convert.ToBoolean(Math.Abs(irány.Item2)));
+            int szorzó = irány.Item2 !=0?1:-1;
+
+            return (s*szorzó,o*szorzó);
+        }
+
+        public static (int, int) balra((int,int) irány) {
+            var s = Convert.ToInt32(!Convert.ToBoolean(Math.Abs(irány.Item1)));
+            var o = Convert.ToInt32(!Convert.ToBoolean(Math.Abs(irány.Item2)));
+            int szorzó = irány.Item2 ==0?1:-1;
+
+            return (s*szorzó,o*szorzó);
+        }
+    }
+
+    public class Poz {
+        public int sor {get;set;}
+        public int oszlop {get;set;}
+        public Típus típus {get;set;}
+    }
+
+    public class Terep {
+        protected StringBuilder _terep;
+        public int Méret {get;private set;}
+        public Típus Itt(int sor , int oszlop) {
+            if (sor>=Méret || oszlop >=Méret || sor<0 || oszlop <0) return Típus.Fal;
+            else return _terep[sor*(Méret+1)+oszlop]=='W'?Típus.Fal:Típus.Út;
+        }
+        public Terep (string terep) {
+           _terep = new StringBuilder(terep);
+
+            while (Méret != terep.Length && terep[Méret] != Environment.NewLine.ToCharArray()[1]) // windows = 1, linux = 0
+            Méret++;
+
+            voltamItt = new bool[Méret, Méret];
+        }
+
+        public bool[,] voltamItt {get;private set;}
+    }
+
+    public class Hely {
+
+        
+        public Poz poz {get;set;}
+        public Hely balra {get;set;}
+        public Hely előre {get;set;}
+        public Hely jobbra {get;set;}
+
+        public (int, int) irány {get;set;}
+
+    }
+    
+    public class Finder
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+
+        public static Terep terep;
+        
+        public static bool PathFinder(string t) {
+
+            terep = new Terep(t);
+            
+            Hely start = new Hely{poz = new Poz{sor=0,oszlop=0}, irány = (1,0)};
+            terep.voltamItt[start.poz.sor, start.poz.oszlop] = true;
+
+            try {
+                Menj(start);
+            } catch (ArgumentException) {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static void Menj(Hely innen) {
+            if (innen == null) return;
+            else if (innen.poz.sor == terep.Méret-1 && innen.poz.oszlop == terep.Méret-1)
+                throw new ArgumentException();
+
+            NézzKörül(innen);
+            Menj(innen.előre);
+            Menj(innen.jobbra);
+            Menj(innen.balra);
+        }
+
+        public static void NézzKörül(Hely itt) {
+            if (itt == null) return;
+
+            //jobbra            
+            (int,int) jobbra = Irányít.jobbra(itt.irány);
+            if (terep.Itt(itt.poz.sor+jobbra.Item1,itt.poz.oszlop+jobbra.Item2) == Típus.Út
+                && !terep.voltamItt[itt.poz.sor+jobbra.Item1,itt.poz.oszlop+jobbra.Item2])
+            {
+                itt.jobbra = new Hely{poz=new Poz {sor=itt.poz.sor+jobbra.Item1, oszlop = itt.poz.oszlop+jobbra.Item2}, irány = jobbra};
+                terep.voltamItt[itt.jobbra.poz.sor, itt.jobbra.poz.oszlop] = true;
+            }
+            
+
+            //balra
+            (int, int) balra = Irányít.balra(itt.irány);
+            if (terep.Itt(itt.poz.sor+balra.Item1,itt.poz.oszlop+balra.Item2)==Típus.Út
+                && !terep.voltamItt[itt.poz.sor+balra.Item1,itt.poz.oszlop+balra.Item2])
+            {
+                itt.balra = new Hely{poz = new Poz {sor=itt.poz.sor+balra.Item1, oszlop = itt.poz.oszlop+balra.Item2}, irány = balra};
+                terep.voltamItt[itt.balra.poz.sor, itt.balra.poz.oszlop] = true;
+            }
+
+            //előre
+            if (terep.Itt(itt.poz.sor+itt.irány.Item1, itt.poz.oszlop+itt.irány.Item2)==Típus.Út
+                && !terep.voltamItt[itt.poz.sor+itt.irány.Item1, itt.poz.oszlop+itt.irány.Item2])
+            {
+                itt.előre = new Hely{poz = new Poz {sor=itt.poz.sor+itt.irány.Item1, oszlop = itt.poz.oszlop+itt.irány.Item2}, irány= itt.irány};
+                terep.voltamItt[itt.előre.poz.sor, itt.előre.poz.oszlop] = true;
+            }
+        }
+    }
+
+
+/*
+    public class Terep {
         StringBuilder m;
-        public Maze(string maze) {
-            m = new StringBuilder(maze);
+        public Terep(string terep) {
+            m = new StringBuilder(terep);
 
-            while (N != maze.Length && maze[N] != Environment.NewLine.ToCharArray()[0])
+            while (N != terep.Length && terep[N] != Environment.NewLine.ToCharArray()[0])
             N++;
 
             for (int i = 0; i < N; i++) {
@@ -66,7 +200,9 @@ namespace Path_Finder_1.Src
             return m.ToString();
         }
     }
+*/
 
+/*
     public class Finder
     {
         static void Main(string[] args)
@@ -74,21 +210,12 @@ namespace Path_Finder_1.Src
             Console.WriteLine("Hello World!");
         }
 
-        static Maze maze;
-        
-        // maze is NxN, your startpoint is [0,0] and your Lookal is [N-1,N-1]
-        // '.' means empty, 'W' means wall, start and endpoint are always empty, never walls.
-        public static bool PathFinder(string m) {
-            Console.WriteLine();
-            Console.WriteLine();
-
-            // Your code here!!
-            maze = new Maze(m);
-            // I need to know how big is my maze. for knowing if I am at the end pos.
+        static Terep(m);
+            // I need to know how big is my terep. for knowing if I am at the end pos.
             // Check if I am in the right position
             // I need to recursively Look in one direction of the four if possible, then check.
-            //Console.WriteLine(maze.N);
-            Console.WriteLine(maze);
+            //Console.WriteLine(terep.N);
+            Console.WriteLine(terep);
             Console.WriteLine();
 
             Pos pos = new Pos{sor =0, oszlop=0};
@@ -101,20 +228,20 @@ namespace Path_Finder_1.Src
             } catch (StackOverflowException) {
                 return false;
             } finally {
-                Console.WriteLine(maze);
+                Console.WriteLine(terep);
             }
 
             return false;
         }
 
         public static void Step(Cardinals from, Pos pos) {
-            if (pos.sor == maze.N-1 && pos.oszlop == maze.N-1)
+            if (pos.sor == terep.N-1 && pos.oszlop == terep.N-1)
                 throw new ArgumentOutOfRangeException();
 
             // go south
             if (from!=Cardinals.South && Look(Cardinals.South, pos)) {
                 //Console.WriteLine(Cardinals.South);
-                maze.Dec(pos.sor, pos.oszlop);
+                terep.Dec(pos.sor, pos.oszlop);
                 pos.sor++;
                 Step(Cardinals.North, pos);
             }
@@ -122,7 +249,7 @@ namespace Path_Finder_1.Src
             //go east
             else if (from!=Cardinals.East && Look(Cardinals.East, pos)) {
                 //Console.WriteLine(Cardinals.East);
-                maze.Dec(pos.sor, pos.oszlop);
+                terep.Dec(pos.sor, pos.oszlop);
                 pos.oszlop++;
                 Step(Cardinals.West, pos);
             }
@@ -130,7 +257,7 @@ namespace Path_Finder_1.Src
             // go north
             else if (from!=Cardinals.North && Look(Cardinals.North, pos)) {
                 //Console.WriteLine(Cardinals.North);
-                maze.Dec(pos.sor, pos.oszlop);
+                terep.Dec(pos.sor, pos.oszlop);
                 pos.sor--;
                 Step(Cardinals.South, pos);
             }
@@ -138,7 +265,7 @@ namespace Path_Finder_1.Src
             // go west
             else if (from!=Cardinals.West && Look(Cardinals.West, pos)) {
                 //Console.WriteLine(Cardinals.West);
-                maze.Dec(pos.sor, pos.oszlop);
+                terep.Dec(pos.sor, pos.oszlop);
                 pos.oszlop--;
                 Step(Cardinals.East, pos);
             }
@@ -153,26 +280,13 @@ namespace Path_Finder_1.Src
             switch (direction)
             {
                 case Cardinals.North:
-                    if (pos.sor == 0 || maze.isWall(pos.sor-1,pos.oszlop)) return false;
-                    else return true;
-                break;
-
-                case Cardinals.West:
-                    if (pos.oszlop == 0 || maze.isWall(pos.sor,pos.oszlop-1)) return false;
-                    else return true;
-                break;
-
-                case Cardinals.South:
-                    if (pos.sor == maze.N-1 || maze.isWall(pos.sor+1,pos.oszlop)) return false;
-                    else return true;
-                break;
-
-                case Cardinals.East:
-                    if (pos.oszlop == maze.N-1 || maze.isWall(pos.sor,pos.oszlop+1)) return false;
+                    if (pos.sor == 0 || terep.isWall(pos.sor,pos.oszlop+1)) return false;
                     else return true;
                 break;
             }
             return true;
         }
     }
+*/
+
 }

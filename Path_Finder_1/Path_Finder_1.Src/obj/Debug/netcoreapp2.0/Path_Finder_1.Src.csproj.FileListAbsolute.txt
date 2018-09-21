@@ -9,3 +9,14 @@
 /Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/obj/Debug/netcoreapp2.0/Path_Finder_1.Src.AssemblyInfo.cs
 /Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/obj/Debug/netcoreapp2.0/Path_Finder_1.Src.dll
 /Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/obj/Debug/netcoreapp2.0/Path_Finder_1.Src.pdb
+C:\Users\barnabas.hajzer\Codewars-Projects\Path_Finder_1\Path_Finder_1.Src\bin\Debug\netcoreapp2.0\Path_Finder_1.Src.deps.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Path_Finder_1\Path_Finder_1.Src\bin\Debug\netcoreapp2.0\Path_Finder_1.Src.runtimeconfig.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Path_Finder_1\Path_Finder_1.Src\bin\Debug\netcoreapp2.0\Path_Finder_1.Src.runtimeconfig.dev.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Path_Finder_1\Path_Finder_1.Src\bin\Debug\netcoreapp2.0\Path_Finder_1.Src.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Path_Finder_1\Path_Finder_1.Src\bin\Debug\netcoreapp2.0\Path_Finder_1.Src.pdb
+C:\Users\barnabas.hajzer\Codewars-Projects\Path_Finder_1\Path_Finder_1.Src\obj\Debug\netcoreapp2.0\Path_Finder_1.Src.csproj.CoreCompileInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Path_Finder_1\Path_Finder_1.Src\obj\Debug\netcoreapp2.0\Path_Finder_1.Src.AssemblyInfoInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Path_Finder_1\Path_Finder_1.Src\obj\Debug\netcoreapp2.0\Path_Finder_1.Src.AssemblyInfo.cs
+C:\Users\barnabas.hajzer\Codewars-Projects\Path_Finder_1\Path_Finder_1.Src\obj\Debug\netcoreapp2.0\Path_Finder_1.Src.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Path_Finder_1\Path_Finder_1.Src\obj\Debug\netcoreapp2.0\Path_Finder_1.Src.pdb
+c:\Users\barnabas.hajzer\Codewars-Projects\Path_Finder_1\Path_Finder_1.Src\obj\Debug\netcoreapp2.0\Path_Finder_1.Src.csprojResolveAssemblyReference.cache

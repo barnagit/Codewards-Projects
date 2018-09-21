@@ -664,23 +664,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/barnabas.hajzer/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\barnabas.hajzer\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/Path_Finder_1.Src.csproj",
+      "projectUniqueName": "C:\\Users\\barnabas.hajzer\\Codewars-Projects\\Path_Finder_1\\Path_Finder_1.Src\\Path_Finder_1.Src.csproj",
       "projectName": "Path_Finder_1.Src",
-      "projectPath": "/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/Path_Finder_1.Src.csproj",
-      "packagesPath": "/Users/barnabas.hajzer/.nuget/packages/",
-      "outputPath": "/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/obj/",
+      "projectPath": "C:\\Users\\barnabas.hajzer\\Codewars-Projects\\Path_Finder_1\\Path_Finder_1.Src\\Path_Finder_1.Src.csproj",
+      "packagesPath": "C:\\Users\\barnabas.hajzer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\barnabas.hajzer\\Codewars-Projects\\Path_Finder_1\\Path_Finder_1.Src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/barnabas.hajzer/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\barnabas.hajzer\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"

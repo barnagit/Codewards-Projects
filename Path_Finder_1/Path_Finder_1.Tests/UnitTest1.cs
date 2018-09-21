@@ -14,7 +14,7 @@ namespace Path_Finder_1.Tests
                         ".W.\n" +
                         "...";
 
-            Assert.Equal(true, Finder.PathFinder(a));
+            Assert.True(Finder.PathFinder(a));
         }
 
         [Fact]
@@ -24,7 +24,7 @@ namespace Path_Finder_1.Tests
                         ".W.\n" +
                         "W..";
 
-            Assert.Equal(false, Finder.PathFinder(b));
+            Assert.False(Finder.PathFinder(b));
         }
 
         [Fact]
@@ -36,7 +36,7 @@ namespace Path_Finder_1.Tests
                         "......\n" +
                         "......";
             
-            Assert.Equal(true, Finder.PathFinder(c));
+            Assert.True(Finder.PathFinder(c));
         }
 
         [Fact]
@@ -49,7 +49,19 @@ namespace Path_Finder_1.Tests
                         ".....W\n" +
                         "....W.";
 
-            Assert.Equal(false, Finder.PathFinder(d));
+            Assert.False(Finder.PathFinder(d));
+        }
+
+        [Fact]
+        public void Test5() {
+            string e =  ".W....\n" +
+                        ".W.W..\n" +
+                        "...WW.\n" +
+                        ".W.W..\n" +
+                        ".W.W.W\n" +
+                        "...W..\n";
+
+            Assert.True(Finder.PathFinder(e));
         }
     }
 }
