@@ -1,0 +1,11 @@
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/bin/Debug/netcoreapp2.0/Path_Finder_1.Src.deps.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/bin/Debug/netcoreapp2.0/Path_Finder_1.Src.runtimeconfig.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/bin/Debug/netcoreapp2.0/Path_Finder_1.Src.runtimeconfig.dev.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/bin/Debug/netcoreapp2.0/Path_Finder_1.Src.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/bin/Debug/netcoreapp2.0/Path_Finder_1.Src.pdb
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/obj/Debug/netcoreapp2.0/Path_Finder_1.Src.csprojResolveAssemblyReference.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/obj/Debug/netcoreapp2.0/Path_Finder_1.Src.csproj.CoreCompileInputs.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/obj/Debug/netcoreapp2.0/Path_Finder_1.Src.AssemblyInfoInputs.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/obj/Debug/netcoreapp2.0/Path_Finder_1.Src.AssemblyInfo.cs
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/obj/Debug/netcoreapp2.0/Path_Finder_1.Src.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Path_Finder_1/Path_Finder_1.Src/obj/Debug/netcoreapp2.0/Path_Finder_1.Src.pdb
