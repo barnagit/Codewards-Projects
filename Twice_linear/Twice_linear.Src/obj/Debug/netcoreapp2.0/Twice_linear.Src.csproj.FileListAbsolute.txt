@@ -1,0 +1,14 @@
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\obj\Debug\netcoreapp2.0\Twice_linear.Src.csprojResolveAssemblyReference.cache
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\obj\Debug\netcoreapp2.0\Twice_linear.Src.csproj.CoreCompileInputs.cache
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\obj\Debug\netcoreapp2.0\Twice_linear.Src.AssemblyInfoInputs.cache
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\obj\Debug\netcoreapp2.0\Twice_linear.Src.AssemblyInfo.cs
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\bin\Debug\netcoreapp2.0\Twice_linear.Src.deps.json
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\bin\Debug\netcoreapp2.0\Twice_linear.Src.runtimeconfig.json
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\bin\Debug\netcoreapp2.0\Twice_linear.Src.runtimeconfig.dev.json
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\bin\Debug\netcoreapp2.0\Twice_linear.Src.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\bin\Debug\netcoreapp2.0\Twice_linear.Src.pdb
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\obj\Debug\netcoreapp2.0\Twice_linear.Src.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Twice_linear\Twice_linear.Src\obj\Debug\netcoreapp2.0\Twice_linear.Src.pdb

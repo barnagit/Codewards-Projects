@@ -3,39 +3,36 @@ using System.Text;
 
 namespace Path_Finder_1.Src
 {
- /*
-    public enum Cardinals
-    {
-        Null, South, East, North, West
-    }
-*/
-
-/*
-    public struct Pos {
-        public int sor;
-        public int oszlop;
-    }
-*/
-
     public enum Típus {
         Fal = 0, Út = 1
     }
 
+    public struct Irány
+    {
+        public Irány(int i1, int i2)
+        {
+            Item1 = i1;
+            Item2 = i2;
+        }
+        public int Item1;
+        public int Item2;
+    }
+
     public static class Irányít {
-        public static (int, int) jobbra((int,int) irány) {
+        public static Irány jobbra(Irány irány) {
             var s = Convert.ToInt32(!Convert.ToBoolean(Math.Abs(irány.Item1)));
             var o = Convert.ToInt32(!Convert.ToBoolean(Math.Abs(irány.Item2)));
             int szorzó = irány.Item2 !=0?1:-1;
 
-            return (s*szorzó,o*szorzó);
+            return new Irány {Item1=s*szorzó,Item2=o*szorzó};
         }
 
-        public static (int, int) balra((int,int) irány) {
+        public static Irány balra(Irány irány) {
             var s = Convert.ToInt32(!Convert.ToBoolean(Math.Abs(irány.Item1)));
             var o = Convert.ToInt32(!Convert.ToBoolean(Math.Abs(irány.Item2)));
             int szorzó = irány.Item2 ==0?1:-1;
 
-            return (s*szorzó,o*szorzó);
+            return new Irány {Item1=s*szorzó,Item2=o*szorzó};
         }
     }
 
@@ -72,7 +69,7 @@ namespace Path_Finder_1.Src
         public Hely előre {get;set;}
         public Hely jobbra {get;set;}
 
-        public (int, int) irány {get;set;}
+        public Irány irány {get;set;}
 
     }
     
@@ -89,7 +86,7 @@ namespace Path_Finder_1.Src
 
             terep = new Terep(t);
             
-            Hely start = new Hely{poz = new Poz{sor=0,oszlop=0}, irány = (1,0)};
+            Hely start = new Hely{poz = new Poz{sor=0,oszlop=0}, irány = new Irány(1,0)};
             terep.voltamItt[start.poz.sor, start.poz.oszlop] = true;
 
             try {
@@ -116,7 +113,7 @@ namespace Path_Finder_1.Src
             if (itt == null) return;
 
             //jobbra            
-            (int,int) jobbra = Irányít.jobbra(itt.irány);
+            Irány jobbra = Irányít.jobbra(itt.irány);
             if (terep.Itt(itt.poz.sor+jobbra.Item1,itt.poz.oszlop+jobbra.Item2) == Típus.Út
                 && !terep.voltamItt[itt.poz.sor+jobbra.Item1,itt.poz.oszlop+jobbra.Item2])
             {
@@ -126,7 +123,7 @@ namespace Path_Finder_1.Src
             
 
             //balra
-            (int, int) balra = Irányít.balra(itt.irány);
+            Irány balra = Irányít.balra(itt.irány);
             if (terep.Itt(itt.poz.sor+balra.Item1,itt.poz.oszlop+balra.Item2)==Típus.Út
                 && !terep.voltamItt[itt.poz.sor+balra.Item1,itt.poz.oszlop+balra.Item2])
             {
@@ -143,150 +140,4 @@ namespace Path_Finder_1.Src
             }
         }
     }
-
-
-/*
-    public class Terep {
-        StringBuilder m;
-        public Terep(string terep) {
-            m = new StringBuilder(terep);
-
-            while (N != terep.Length && terep[N] != Environment.NewLine.ToCharArray()[0])
-            N++;
-
-            for (int i = 0; i < N; i++) {
-                for (int j = 0; j < N; j++) {
-
-                    // is wall, continue
-                    if (isWall(i,j)) continue;
-                    else Set(i,j,'0');
-
-                    // look North
-                    if (i > 0 && !isWall(i-1,j))
-                        Set(i,j,(Char.GetNumericValue(At(i,j))+1).ToString().ToCharArray()[0]);
-                    
-                    // look South
-                    if (i < N-1 && !isWall(i+1,j))
-                        Set(i,j,(Char.GetNumericValue(At(i,j))+1).ToString().ToCharArray()[0]);
-                    
-                    // look East
-                    if (j < N-1 && !isWall(i,j+1))
-                        Set(i,j,(Char.GetNumericValue(At(i,j))+1).ToString().ToCharArray()[0]);
-
-                    // look West
-                    if (j > 0 && !isWall(i,j-1))
-                        Set(i,j,(Char.GetNumericValue(At(i,j))+1).ToString().ToCharArray()[0]);
-                }
-            } 
-        }
-        
-        public int N {get;private set;}
-        public char At(int sor , int oszlop) {
-            return m[sor*(N+1)+oszlop];
-        }
-        public void Set(int sor, int oszlop, char v) {
-            m[sor*(N+1)+oszlop] = v;
-        }
-        public void Dec(int sor, int oszlop) {
-            int val = (int)Char.GetNumericValue(At(sor,oszlop))-1;
-            char c = val==0?'W':(val).ToString().ToCharArray()[0];
-            Set(sor,oszlop,c);
-        }
-        public bool isWall(int sor, int oszlop) {
-            return m[sor*(N+1)+oszlop] == 'W';
-        }
-
-        public override string ToString() {
-            return m.ToString();
-        }
-    }
-*/
-
-/*
-    public class Finder
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-
-        static Terep(m);
-            // I need to know how big is my terep. for knowing if I am at the end pos.
-            // Check if I am in the right position
-            // I need to recursively Look in one direction of the four if possible, then check.
-            //Console.WriteLine(terep.N);
-            Console.WriteLine(terep);
-            Console.WriteLine();
-
-            Pos pos = new Pos{sor =0, oszlop=0};
-            try {
-                Step(Cardinals.Null, pos);
-            } catch (ArgumentNullException) {
-                return false;
-            } catch (ArgumentOutOfRangeException) { 
-                return true;
-            } catch (StackOverflowException) {
-                return false;
-            } finally {
-                Console.WriteLine(terep);
-            }
-
-            return false;
-        }
-
-        public static void Step(Cardinals from, Pos pos) {
-            if (pos.sor == terep.N-1 && pos.oszlop == terep.N-1)
-                throw new ArgumentOutOfRangeException();
-
-            // go south
-            if (from!=Cardinals.South && Look(Cardinals.South, pos)) {
-                //Console.WriteLine(Cardinals.South);
-                terep.Dec(pos.sor, pos.oszlop);
-                pos.sor++;
-                Step(Cardinals.North, pos);
-            }
-
-            //go east
-            else if (from!=Cardinals.East && Look(Cardinals.East, pos)) {
-                //Console.WriteLine(Cardinals.East);
-                terep.Dec(pos.sor, pos.oszlop);
-                pos.oszlop++;
-                Step(Cardinals.West, pos);
-            }
-
-            // go north
-            else if (from!=Cardinals.North && Look(Cardinals.North, pos)) {
-                //Console.WriteLine(Cardinals.North);
-                terep.Dec(pos.sor, pos.oszlop);
-                pos.sor--;
-                Step(Cardinals.South, pos);
-            }
-
-            // go west
-            else if (from!=Cardinals.West && Look(Cardinals.West, pos)) {
-                //Console.WriteLine(Cardinals.West);
-                terep.Dec(pos.sor, pos.oszlop);
-                pos.oszlop--;
-                Step(Cardinals.East, pos);
-            }
-
-            if (from == Cardinals.Null)
-                throw new ArgumentNullException();
-
-            
-        }
-
-        public static bool Look(Cardinals direction, Pos pos) {
-            switch (direction)
-            {
-                case Cardinals.North:
-                    if (pos.sor == 0 || terep.isWall(pos.sor,pos.oszlop+1)) return false;
-                    else return true;
-                break;
-            }
-            return true;
-        }
-    }
-*/
-
 }
