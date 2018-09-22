@@ -5713,23 +5713,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\barnabas.hajzer\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/barnabas.hajzer/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\barnabas.hajzer\\Codewars-Projects\\Twice_linear\\Twice_linear.Src\\Twice_linear.Src.csproj",
+      "projectUniqueName": "/Users/barnabas.hajzer/Desktop/Codewards-Projects/Twice_linear/Twice_linear.Src/Twice_linear.Src.csproj",
       "projectName": "Twice_linear.Src",
-      "projectPath": "C:\\Users\\barnabas.hajzer\\Codewars-Projects\\Twice_linear\\Twice_linear.Src\\Twice_linear.Src.csproj",
-      "packagesPath": "C:\\Users\\barnabas.hajzer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\barnabas.hajzer\\Codewars-Projects\\Twice_linear\\Twice_linear.Src\\obj\\",
+      "projectPath": "/Users/barnabas.hajzer/Desktop/Codewards-Projects/Twice_linear/Twice_linear.Src/Twice_linear.Src.csproj",
+      "packagesPath": "/Users/barnabas.hajzer/.nuget/packages/",
+      "outputPath": "/Users/barnabas.hajzer/Desktop/Codewards-Projects/Twice_linear/Twice_linear.Src/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\barnabas.hajzer\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/barnabas.hajzer/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
