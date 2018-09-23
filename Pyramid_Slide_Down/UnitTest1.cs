@@ -19,6 +19,7 @@ namespace Pyramid_Slide_Down
             Assert.Equal(23, PyramidSlideDown.LongestSlideDown(smallPyramid));
         }
 
+        [Fact]
         public void MediumPyramidTest()
         {
             var mediumPyramid = new[]

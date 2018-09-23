@@ -1,0 +1,13 @@
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/obj/Debug/netcoreapp2.0/Pyramid_Slide_Down.csproj.CoreCompileInputs.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/obj/Debug/netcoreapp2.0/Pyramid_Slide_Down.AssemblyInfoInputs.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/obj/Debug/netcoreapp2.0/Pyramid_Slide_Down.AssemblyInfo.cs
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/bin/Debug/netcoreapp2.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/bin/Debug/netcoreapp2.0/xunit.runner.reporters.netcoreapp10.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/bin/Debug/netcoreapp2.0/xunit.runner.utility.netcoreapp10.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/bin/Debug/netcoreapp2.0/Pyramid_Slide_Down.deps.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/bin/Debug/netcoreapp2.0/Pyramid_Slide_Down.runtimeconfig.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/bin/Debug/netcoreapp2.0/Pyramid_Slide_Down.runtimeconfig.dev.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/bin/Debug/netcoreapp2.0/Pyramid_Slide_Down.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/bin/Debug/netcoreapp2.0/Pyramid_Slide_Down.pdb
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/obj/Debug/netcoreapp2.0/Pyramid_Slide_Down.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Pyramid_Slide_Down/obj/Debug/netcoreapp2.0/Pyramid_Slide_Down.pdb
