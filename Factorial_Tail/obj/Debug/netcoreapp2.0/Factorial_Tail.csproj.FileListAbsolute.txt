@@ -1,0 +1,13 @@
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/bin/Debug/netcoreapp2.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/bin/Debug/netcoreapp2.0/xunit.runner.reporters.netcoreapp10.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/bin/Debug/netcoreapp2.0/xunit.runner.utility.netcoreapp10.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/bin/Debug/netcoreapp2.0/Factorial_Tail.deps.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/bin/Debug/netcoreapp2.0/Factorial_Tail.runtimeconfig.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/bin/Debug/netcoreapp2.0/Factorial_Tail.runtimeconfig.dev.json
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/bin/Debug/netcoreapp2.0/Factorial_Tail.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/bin/Debug/netcoreapp2.0/Factorial_Tail.pdb
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/obj/Debug/netcoreapp2.0/Factorial_Tail.csproj.CoreCompileInputs.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/obj/Debug/netcoreapp2.0/Factorial_Tail.AssemblyInfoInputs.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/obj/Debug/netcoreapp2.0/Factorial_Tail.AssemblyInfo.cs
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/obj/Debug/netcoreapp2.0/Factorial_Tail.dll
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Factorial_Tail/obj/Debug/netcoreapp2.0/Factorial_Tail.pdb
