@@ -1,0 +1,3 @@
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Text_Align_Justify/obj/Debug/netcoreapp2.0/Text_Align_Justify.csproj.CoreCompileInputs.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Text_Align_Justify/obj/Debug/netcoreapp2.0/Text_Align_Justify.AssemblyInfoInputs.cache
+/Users/barnabas.hajzer/Desktop/Codewards-Projects/Text_Align_Justify/obj/Debug/netcoreapp2.0/Text_Align_Justify.AssemblyInfo.cs
