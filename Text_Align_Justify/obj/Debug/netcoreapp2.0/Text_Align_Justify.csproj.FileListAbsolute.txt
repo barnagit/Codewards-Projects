@@ -1,3 +1,17 @@
 /Users/barnabas.hajzer/Desktop/Codewards-Projects/Text_Align_Justify/obj/Debug/netcoreapp2.0/Text_Align_Justify.csproj.CoreCompileInputs.cache
 /Users/barnabas.hajzer/Desktop/Codewards-Projects/Text_Align_Justify/obj/Debug/netcoreapp2.0/Text_Align_Justify.AssemblyInfoInputs.cache
 /Users/barnabas.hajzer/Desktop/Codewards-Projects/Text_Align_Justify/obj/Debug/netcoreapp2.0/Text_Align_Justify.AssemblyInfo.cs
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\bin\Debug\netcoreapp2.0\Text_Align_Justify.deps.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\bin\Debug\netcoreapp2.0\Text_Align_Justify.runtimeconfig.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\bin\Debug\netcoreapp2.0\Text_Align_Justify.runtimeconfig.dev.json
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\bin\Debug\netcoreapp2.0\Text_Align_Justify.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\bin\Debug\netcoreapp2.0\Text_Align_Justify.pdb
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\obj\Debug\netcoreapp2.0\Text_Align_Justify.csproj.CoreCompileInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\obj\Debug\netcoreapp2.0\Text_Align_Justify.AssemblyInfoInputs.cache
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\obj\Debug\netcoreapp2.0\Text_Align_Justify.AssemblyInfo.cs
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\obj\Debug\netcoreapp2.0\Text_Align_Justify.dll
+C:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\obj\Debug\netcoreapp2.0\Text_Align_Justify.pdb
+c:\Users\barnabas.hajzer\Codewars-Projects\Text_Align_Justify\obj\Debug\netcoreapp2.0\Text_Align_Justify.csprojResolveAssemblyReference.cache
