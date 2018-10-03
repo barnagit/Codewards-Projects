@@ -3,14 +3,6 @@ using System.Collections.Generic;
 
 namespace Functional_Streams
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
-
     
 /*
     A Stream is an infinite sequence of items. It is defined recursively
@@ -38,7 +30,7 @@ static class Stream
   */
   public static Stream<T> Cons<T>(T h, Func<Stream<T>> t)
   {
-    throw new NotImplementedException();
+      return new Stream<T>(h, new Lazy<Stream<T>>(t));
   }
 
   // .------------------------------.
@@ -47,32 +39,43 @@ static class Stream
 
   // Construct a stream by repeating a value.
   public static Stream<T> Repeat<T>(T x)
-  {
-    throw new NotImplementedException();
+  {      
+      return Cons(x,()=>Repeat(x));
   }
 
   // Construct a stream by repeatedly applying a function.
   public static Stream<T> Iterate<T>(Func<T, T> f, T x)
   {
-    throw new NotImplementedException();
+      return  Cons(x,()=>Iterate(f,f(x)));
   }
 
   // Construct a stream by repeating an enumeration forever.
   public static Stream<T> Cycle<T>(IEnumerable<T> a)
   {
-    throw new NotImplementedException();
+      IEnumerator<T> e = a.GetEnumerator();
+      e.MoveNext();
+      return Cons(e.Current,()=>Cycle(e));
+  }
+  private static Stream<T> Cycle<T>(IEnumerator<T> e)
+  {
+    if (e.MoveNext()) return Cons(e.Current,()=>Cycle(e));
+    else {
+        e.Reset();
+        e.MoveNext();
+        return Cons(e.Current,()=>Cycle(e));
+    }
   }
 
   // Construct a stream by counting numbers starting from a given one.
   public static Stream<int> From(int x)
   {
-    throw new NotImplementedException();
+      return Cons(x,()=>From(x+1));
   }
   
   // Same as From but count with a given step width.
   public static Stream<int> FromThen(int x, int d)
   {
-    throw new NotImplementedException();
+      return Cons(x,()=>FromThen(x+d,d));
   }
 
   // .------------------------------------------.

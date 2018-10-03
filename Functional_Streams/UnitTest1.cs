@@ -4,14 +4,6 @@ using System.Linq;
 
 namespace Functional_Streams
 {
-    public class UnitTest1
-    {
-        [Fact]
-        public void Test1()
-        {
-
-        }
-    }
 
   public class ConstructorTests
   {

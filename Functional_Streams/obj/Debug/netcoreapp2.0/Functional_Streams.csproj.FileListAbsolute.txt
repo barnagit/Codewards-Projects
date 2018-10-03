@@ -1,0 +1,14 @@
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\bin\Debug\netcoreapp2.0\Functional_Streams.deps.json
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\bin\Debug\netcoreapp2.0\Functional_Streams.runtimeconfig.json
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\bin\Debug\netcoreapp2.0\Functional_Streams.runtimeconfig.dev.json
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\bin\Debug\netcoreapp2.0\Functional_Streams.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\bin\Debug\netcoreapp2.0\Functional_Streams.pdb
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\obj\Debug\netcoreapp2.0\Functional_Streams.csprojResolveAssemblyReference.cache
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\obj\Debug\netcoreapp2.0\Functional_Streams.csproj.CoreCompileInputs.cache
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\obj\Debug\netcoreapp2.0\Functional_Streams.AssemblyInfoInputs.cache
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\obj\Debug\netcoreapp2.0\Functional_Streams.AssemblyInfo.cs
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\obj\Debug\netcoreapp2.0\Functional_Streams.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Functional_Streams\obj\Debug\netcoreapp2.0\Functional_Streams.pdb
