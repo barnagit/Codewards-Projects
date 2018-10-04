@@ -89,25 +89,40 @@ static class Stream
   */
   public static U Foldr<T,U>(this Stream<T> s, Func<T, Func<U>, U> f)
   {
-    throw new NotImplementedException();
+    return f(s.Head,()=>Foldr(s.Tail.Value,f));
   }
 
   // Filter stream with a predicate function.
   public static Stream<T> Filter<T>(this Stream<T> s, Predicate<T> p)
   {
-    throw new NotImplementedException();
+    while (!p(s.Head)) {
+      s = s.Tail.Value;
+    }
+    return Cons(s.Head,()=>s.Tail.Value.Filter(p));
   }
 
   // Returns a given amount of elements from the stream.
   public static IEnumerable<T> Take<T>(this Stream<T> s, int n)
   {
-    throw new NotImplementedException();
+      if (s.Head == null || n < 1) return new T[0];
+      T[] a = new T[n];
+      Stream<T> ss = s;
+      for (int i = 0; i < n; i++) {
+        a[i]=ss.Head;
+        ss=ss.Tail.Value;
+      }
+      return a;
   }
 
   // Drop a given amount of elements from the stream.
   public static Stream<T> Drop<T>(this Stream<T> s, int n)
   {
-    throw new NotImplementedException();
+    for (int i = 0; i < n; i++) {
+      if (s.Tail != null)
+        s = s.Tail.Value;
+      else return null;
+    }
+    return s;
   }
 
   // Combine 2 streams with a function.
