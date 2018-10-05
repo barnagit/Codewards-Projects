@@ -154,5 +154,21 @@ namespace Functional_Streams
         t = t.Tail.Value;
       }
     }
+
+    [Fact]
+    public void Fib() {
+      // 0 1 1 2 3 5 8 13 21 34
+      var s = Stream.Fib().Take(10).ToArray();
+      int p1 =0;
+      int p2 =1;
+      int t =0;
+      for (int i = 2; i < s.Length; i++)
+      {
+        Assert.Equal(s[i], p1+p2);
+        t = p1;
+        p1 = p2;
+        p2 += t;
+      }
+    }
   }
 }

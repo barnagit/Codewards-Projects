@@ -128,19 +128,25 @@ static class Stream
   // Combine 2 streams with a function.
   public static Stream<R> ZipWith<T, U, R>(this Stream<T> s, Func<T, U, R> f, Stream<U> other)
   {
-    throw new NotImplementedException();
+    return Cons(f(s.Head,other.Head),()=>ZipWith(s.Tail.Value,f,other.Tail.Value));
   }
 
   // Map every value of the stream with a function, returning a new stream.
   public static Stream<U> FMap<T, U>(this Stream<T> s, Func<T, U> f)
   {
-    throw new NotImplementedException();
+    return Cons(f(s.Head),()=>FMap(s.Tail.Value,f));
   }
 
   // Return the stream of all fibonacci numbers.
+  // 0 1 1 2 3 5 8 13 21 34
   public static Stream<int> Fib()
   {
-    throw new NotImplementedException();
+    return Cons(0,()=>Cons(1,()=>FHelper(0,1)));
+  }
+
+  private static Stream<int> FHelper(int a, int b)
+  {
+    return Cons(a+b , ()=> FHelper(b, a+b));
   }
 
   // Return the stream of all prime numbers.
