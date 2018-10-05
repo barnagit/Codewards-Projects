@@ -152,7 +152,30 @@ static class Stream
   // Return the stream of all prime numbers.
   public static Stream<int> Primes()
   {
-    throw new NotImplementedException();
+    return Cons(2,()=>FromThen(3,2).Filter((p)=>IsPrime(p)));
   }
+
+  private static bool IsPrime(int oddNumber)
+  {
+    // not needed given the usage
+    /*
+    if ((number & 1) == 0)
+    {
+      return (number == 2);
+    }
+    */
+
+    int limit = (int) Math.Sqrt(oddNumber);
+
+    for (int i = 3; i <= limit; i += 2)
+    {
+      if ((oddNumber % i) == 0)
+      {
+        return false;
+      }
+    }
+    return true;
+  }
+
 }
 }
