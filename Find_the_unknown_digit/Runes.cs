@@ -17,14 +17,15 @@ namespace Find_the_unknown_digit
 
             HashSet<char> numbers = new HashSet<char>(new char[] {'0','1','2','3','4','5','6','7','8','9'});
 
-            // if the first char is unknown we know the unknown digit is not zero
-            if (expression[0].Equals('?')) numbers.Remove('0');
-
             // remove the known digits from the unknown list
             for (int i = 0; i < expression.Length; i++) {
                 if (Char.IsDigit(expression[i])) {
                     numbers.Remove(expression[i]);
                 }
+            }
+
+            if (expression.Contains("??")){
+                 numbers.Remove('0');
             }
             
             // try to evaluate the expression

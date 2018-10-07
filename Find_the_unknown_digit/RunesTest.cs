@@ -16,6 +16,7 @@ namespace Find_the_unknown_digit
             Assert.Equal(2, Runes.solveExpression("?*11=??")); //, "Answer for expression '?*11=??' ");
             Assert.Equal(2, Runes.solveExpression("??*1=??")); //, "Answer for expression '??*1=??' ");
             Assert.Equal(-1, Runes.solveExpression("??+??=??")); //, "Answer for expression '??+??=??' ");
+            Assert.Equal(2,Runes.solveExpression("?*11=??"));
         }
     }
 }
