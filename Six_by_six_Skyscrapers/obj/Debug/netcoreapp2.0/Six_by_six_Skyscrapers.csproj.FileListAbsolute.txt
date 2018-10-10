@@ -1,0 +1,14 @@
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\bin\Debug\netcoreapp2.0\Six_by_six_Skyscrapers.deps.json
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\bin\Debug\netcoreapp2.0\Six_by_six_Skyscrapers.runtimeconfig.json
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\bin\Debug\netcoreapp2.0\Six_by_six_Skyscrapers.runtimeconfig.dev.json
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\bin\Debug\netcoreapp2.0\Six_by_six_Skyscrapers.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\bin\Debug\netcoreapp2.0\Six_by_six_Skyscrapers.pdb
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\obj\Debug\netcoreapp2.0\Six_by_six_Skyscrapers.csprojResolveAssemblyReference.cache
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\obj\Debug\netcoreapp2.0\Six_by_six_Skyscrapers.csproj.CoreCompileInputs.cache
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\obj\Debug\netcoreapp2.0\Six_by_six_Skyscrapers.AssemblyInfoInputs.cache
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\obj\Debug\netcoreapp2.0\Six_by_six_Skyscrapers.AssemblyInfo.cs
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\obj\Debug\netcoreapp2.0\Six_by_six_Skyscrapers.dll
+c:\Users\barnabas.hajzer\Codewars-Projects\Six_by_six_Skyscrapers\obj\Debug\netcoreapp2.0\Six_by_six_Skyscrapers.pdb
