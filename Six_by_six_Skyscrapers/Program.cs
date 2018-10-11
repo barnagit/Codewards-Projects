@@ -84,7 +84,18 @@ namespace Six_by_six_Skyscrapers
             return null;
         }
 
-        public static void CleanUp() 
+        static void Guess(Matrix origin) {
+            // make a copy
+            Matrix matrix = origin.Copy();
+            // make the most obvious guess (less possibilities)
+            int min = matrix.Cells.Min(c => c.Values.Count());
+            matrix.Cells.First(c => c.Values.Count == min);
+            // calculate until possible
+            // false if there is 0 number anywhere
+            // make a next guess if needed.
+        }
+
+        static void CleanUp() 
         {
             #region find single present items
                 // in every row find the number which is present only in one cell of that row
@@ -196,6 +207,9 @@ namespace Six_by_six_Skyscrapers
     class Matrix 
     {
         Cell[] _cells = new Cell[36];
+        public IEnumerable<Cell> Cells {
+            get {return _cells;}
+        }
 
         public Matrix() 
         {
@@ -214,6 +228,17 @@ namespace Six_by_six_Skyscrapers
                + Environment.NewLine + String.Join(' ',_cells.Skip(18).Take(6).Select(c => c.ToString()))
                + Environment.NewLine + String.Join(' ',_cells.Skip(24).Take(6).Select(c => c.ToString()))
                + Environment.NewLine + String.Join(' ',_cells.Skip(30).Take(6).Select(c => c.ToString()));
+        }
+
+        public Matrix Copy() {
+            Matrix n = new Matrix();
+            
+            for (int i = 0; i < n._cells.Length; i++) {
+                 n._cells[i].Values.Clear();
+                 n._cells[i].Values.Concat(this._cells[i].Values);
+            }
+
+            return n;
         }
     }
 
