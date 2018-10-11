@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Six_by_six_Skyscrapers
 {
     class Skyscrapers
     {
+        private static Clues c;
+        private static Matrix m;
+
         public static int[][] SolvePuzzle(int[] clues)
         {
-            var c = new Clues(clues);
-            var m = new Matrix();
+            c = new Clues(clues);
+            m = new Matrix();
 
+            #region remove the obvious
             for (int i = 0; i < 6; i++) {
 
                 // iterate on columns
@@ -64,13 +69,93 @@ namespace Six_by_six_Skyscrapers
                     for (int j = 0; j < 6;j++)
                         m.Get(j,i).Values.RemoveAll(s => s > 7-vLeft + j);
                 else if (vLeft == 1) {
-                    m.Get(i,0).Values.RemoveAll(s => s != 6);
+                    m.Get(0,i).Values.RemoveAll(s => s != 6);
                     for (int j = 1; j <6; j++) 
-                        m.Get(j,i).Values.Remove(6);
+                        m.Get(j,i).Values.Remove(6); 
                 }
 
             }
+            #endregion
+            
+            CleanUp();
+
+            Console.WriteLine(m);
+
             return null;
+        }
+
+        public static void CleanUp() 
+        {
+            #region find single present items
+                // in every row find the number which is present only in one cell of that row
+
+                // take every row
+                for (int i = 0; i < 6; i++) {
+                    // for every number take..
+                    for (int n = 1; n < 7; n++) {
+                        int c = 0;
+                        int col = -1;
+                        // count them through columns
+                        for (int j = 0; j < 6; j++) {
+                            if(m.Get(j,i).Values.Contains(n)) {
+                                c++;
+                                col = j;
+                            }
+                        }
+
+                        // and if it is present only once
+                        if (c == 1) {
+                            // remove every other number from that cell.
+                            m.Get(col, i).Values.RemoveAll(s => s != n);
+                        }
+                    }
+                }
+
+
+                // in every col find the number which is present only in one cell of that col
+
+                // take every col
+                for (int j = 0; j < 6; j++) {
+                    // for every number take...
+                    for (int n = 1; n <7; n++) {
+                        int c = 0;
+                        int row = -1;
+                        // count them through the rows
+                        for (int i = 0; i < 6; i++) {
+                            if (m.Get(j,i).Values.Contains(n)) {
+                                c++;
+                                row = i;
+                            }
+                        }
+
+                        // and if it is present only once
+                        if (c == 1) {
+                            // remove every other number from that cell.
+                            m.Get(j, row).Values.RemoveAll(s => s != n);
+                        }
+                    }
+                }
+
+            #endregion
+
+            #region find lone items
+
+            // after removal find thos cells have only one item in it
+            // and remove that number from the row and col the cell is sitting in
+
+            bool didWeRemoveAnything = false;
+            for (int col = 0; col < 6; col++) 
+                for (int row = 0; row < 6; row++)
+                    if (m.Get(col,row).Values.Count == 1) {
+                        for (int i = 0; i < 6; i++) {
+                            if (i != col) if (m.Get(i,row).Values.Remove(m.Get(col,row).Values.First())) didWeRemoveAnything = true;
+                            if (i != row) if(m.Get(col,i).Values.Remove(m.Get(col,row).Values.First())) didWeRemoveAnything = true;;
+                        }
+                    }
+                         
+            if (didWeRemoveAnything) CleanUp();
+
+            #endregion
         }
     }
 
@@ -121,6 +206,15 @@ namespace Six_by_six_Skyscrapers
         public Cell Get(int col, int row) {
             return _cells[row*6+col];
         }
+
+        public override string ToString() {
+              return  String.Join(' ',_cells.Take(6).Select(c => c.ToString()))
+               + Environment.NewLine + String.Join(' ',_cells.Skip(6).Take(6).Select(c => c.ToString()))
+               + Environment.NewLine + String.Join(' ',_cells.Skip(12).Take(6).Select(c => c.ToString()))
+               + Environment.NewLine + String.Join(' ',_cells.Skip(18).Take(6).Select(c => c.ToString()))
+               + Environment.NewLine + String.Join(' ',_cells.Skip(24).Take(6).Select(c => c.ToString()))
+               + Environment.NewLine + String.Join(' ',_cells.Skip(30).Take(6).Select(c => c.ToString()));
+        }
     }
 
     class Cell
@@ -128,6 +222,10 @@ namespace Six_by_six_Skyscrapers
    
         private List<int> _values = new List<int> {1,2,3,4,5,6};
         public List<int> Values {get {return _values;}}
+
+        public override string ToString() {
+            return new StringBuilder("|").Append(String.Join(",",Values).PadRight(13)).Append("|").ToString();
+        }
 
     }
 
