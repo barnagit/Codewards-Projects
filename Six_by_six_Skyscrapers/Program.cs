@@ -77,25 +77,64 @@ namespace Six_by_six_Skyscrapers
             }
             #endregion
             
-            CleanUp();
+            CleanUp(m);
 
             Console.WriteLine(m);
+            
+            int k = 0;
+            if (m.Cells.Count(c => c.Values.Count() > 1) > 0) 
+                while (m.Cells.Aggregate(0,(i,c) => i+c.Values.Count()) > k
+                    && Solution == null)
+                    Guess(m,k++);
+
+            Console.WriteLine(Solution);
 
             return null;
         }
 
-        static void Guess(Matrix origin) {
+        static Matrix Solution;
+
+        static bool Guess(Matrix origin, int skip) {
             // make a copy
             Matrix matrix = origin.Copy();
             // make the most obvious guess (less possibilities)
-            int min = matrix.Cells.Min(c => c.Values.Count());
-            matrix.Cells.First(c => c.Values.Count == min);
+            var cells = matrix.Cells.Where(cc => cc.Values.Count > 1).OrderBy(c => c.Values.Count);
+            Cell cell = cells.First();
+            int next = 0;
+            int skipped = 0;
+            for (int i = 0; i < skip; i++) {
+                if (cell.Values.Count() > skipped) {
+                    skipped ++;
+                } else {
+                    next++;
+                    skipped = 0;
+                    cell = cells.Skip(next).First();
+                }
+            }
+            int myValue = cell.Values.ElementAt(Math.Max(skipped-1,0));
+            cell.Values.RemoveAll(v => v != myValue);
+
             // calculate until possible
+            CleanUp(matrix);
+
+            Console.WriteLine(matrix.ToString());
+
             // false if there is 0 number anywhere
+            if (matrix.Cells.Where(ccc => ccc.Values.Count == 0).Count() > 0 || !matrix.IsValid()) return false;
             // make a next guess if needed.
+            else if (matrix.Cells.Where(cccc => cccc.Values.Count()>1).Count() > 0) {
+                int j = 0;
+                while (matrix.Cells.Aggregate(0,(i,c) => i+c.Values.Count()) > j && Solution == null)
+                    if (!Guess(matrix,j)) j++;
+            } else {
+                Solution = matrix;
+                return true;
+            }
+
+            return false;
         }
 
-        static void CleanUp() 
+        static void CleanUp(Matrix m) 
         {
             #region find single present items
                 // in every row find the number which is present only in one cell of that row
@@ -164,7 +203,7 @@ namespace Six_by_six_Skyscrapers
                         }
                     }
                          
-            if (didWeRemoveAnything) CleanUp();
+            if (didWeRemoveAnything) CleanUp(m);
 
             #endregion
         }
@@ -207,7 +246,8 @@ namespace Six_by_six_Skyscrapers
     class Matrix 
     {
         Cell[] _cells = new Cell[36];
-        public IEnumerable<Cell> Cells {
+        public IEnumerable<Cell> Cells
+        {
             get {return _cells;}
         }
 
@@ -217,11 +257,13 @@ namespace Six_by_six_Skyscrapers
                 _cells[i] = new Cell();
         }
 
-        public Cell Get(int col, int row) {
+        public Cell Get(int col, int row)
+        {
             return _cells[row*6+col];
         }
 
-        public override string ToString() {
+        public override string ToString() 
+        {
               return  String.Join(' ',_cells.Take(6).Select(c => c.ToString()))
                + Environment.NewLine + String.Join(' ',_cells.Skip(6).Take(6).Select(c => c.ToString()))
                + Environment.NewLine + String.Join(' ',_cells.Skip(12).Take(6).Select(c => c.ToString()))
@@ -235,10 +277,45 @@ namespace Six_by_six_Skyscrapers
             
             for (int i = 0; i < n._cells.Length; i++) {
                  n._cells[i].Values.Clear();
-                 n._cells[i].Values.Concat(this._cells[i].Values);
+                 n._cells[i].Values.AddRange(this._cells[i].Values);
             }
 
             return n;
+        }
+
+        public bool IsValid()
+        {
+            for (int i = 0; i < 6; i++) {
+                int [] rowVals = new int[6];
+                int [] colVals = new int[6];
+                for (int j = 0; j < 6; j ++) {
+                    if (Get(j,i).Values.Count() == 1) rowVals[j] = Get(j,i).Values.First();
+                    if (Get(i,j).Values.Count() == 1) colVals[j] = Get(i,j).Values.First();
+                }
+                if (rowVals.Where(v => v > 0).GroupBy(key => key).Count(g => g.Count()>1) > 1)
+                    return false;
+                if (colVals.Where(v => v > 0).GroupBy(key => key).Count(g => g.Count()>1) > 1)
+                    return false;
+
+                rowVals = new int[0];
+                colVals = new int[0];
+
+                for (int j = 0; j < 6; j ++) {
+                    rowVals = rowVals.Concat(Get(j,i).Values).ToArray();
+                    colVals = colVals.Concat(Get(i,j).Values).ToArray();
+                }
+
+                if (!rowVals.Distinct().OrderBy(a=>a).SequenceEqual(new int[]{1,2,3,4,5,6}) 
+                    || !colVals.Distinct().OrderBy(a=>a).SequenceEqual(new int[]{1,2,3,4,5,6}))
+                    return false;
+            }
+
+            return true;
+        }
+
+        public bool IsCorrect(Clues clues) 
+        {
+            throw new NotImplementedException();
         }
     }
 
