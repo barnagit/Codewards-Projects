@@ -79,13 +79,15 @@ namespace Six_by_six_Skyscrapers
             
             CleanUp(m);
 
-            Console.WriteLine(m);
+            //Console.WriteLine(m);
             
             int k = 0;
             if (m.Cells.Count(c => c.Values.Count() > 1) > 0) 
                 while (m.Cells.Aggregate(0,(i,c) => i+c.Values.Count()) > k
                     && Solution == null)
+                {
                     Guess(m,k++);
+                }
 
             Console.WriteLine(Solution);
 
@@ -94,7 +96,12 @@ namespace Six_by_six_Skyscrapers
 
         static Matrix Solution;
 
-        static bool Guess(Matrix origin, int skip) {
+        static bool Guess(Matrix origin, int skip, int level = 0) {
+
+/*             string[] spaces = new string[skip];
+            for (int spacesIndex = 0; spacesIndex < spaces.Length; spacesIndex++) spaces[spacesIndex] = "-";
+            Console.WriteLine("{0}{1}",String.Join("",spaces), level); */
+
             // make a copy
             Matrix matrix = origin.Copy();
             // make the most obvious guess (less possibilities)
@@ -103,12 +110,12 @@ namespace Six_by_six_Skyscrapers
             int next = 0;
             int skipped = 0;
             for (int i = 0; i < skip; i++) {
+                cell = cells.Skip(next).First();
                 if (cell.Values.Count() > skipped) {
                     skipped ++;
                 } else {
                     next++;
                     skipped = 0;
-                    cell = cells.Skip(next).First();
                 }
             }
             int myValue = cell.Values.ElementAt(Math.Max(skipped-1,0));
@@ -117,17 +124,20 @@ namespace Six_by_six_Skyscrapers
             // calculate until possible
             CleanUp(matrix);
 
-            Console.WriteLine(matrix.ToString());
+            //Console.WriteLine(matrix.ToString());
 
             // false if there is 0 number anywhere
-            if (matrix.Cells.Where(ccc => ccc.Values.Count == 0).Count() > 0 || !matrix.IsValid()) return false;
+            if (matrix.Cells.Where(ccc => ccc.Values.Count == 0).Count() > 0 || !matrix.IsValid() || !matrix.IsCorrect(c)) return false;
             // make a next guess if needed.
+            // if there are cells with more than 1 value in it, next Guess is needed
             else if (matrix.Cells.Where(cccc => cccc.Values.Count()>1).Count() > 0) {
                 int j = 0;
-                while (matrix.Cells.Aggregate(0,(i,c) => i+c.Values.Count()) > j && Solution == null)
-                    if (!Guess(matrix,j)) j++;
+                // while we have more items to reduce than skip, make a next guess and if that is false, increase skip
+                while (matrix.Cells.Where(w => w.Values.Count()>1).Aggregate(0,(i,c) => i+c.Values.Count()) > j && Solution == null)
+                    if (!Guess(matrix,j, level+1)) j++;
             } else {
                 Solution = matrix;
+                Solution.IsCorrect(c);
                 return true;
             }
 
@@ -315,7 +325,104 @@ namespace Six_by_six_Skyscrapers
 
         public bool IsCorrect(Clues clues) 
         {
-            throw new NotImplementedException();
+            // top row
+            for (int i = 0; i < 6; i++) {
+
+                int toSee = clues.Get(i,-1).Val;
+                if (toSee == 0) continue;
+
+                int canSee = 0;
+                int maxSeen = 0;
+                for (int j = 0; j < 6; j++) {
+
+                    if (Get(i,j).Values.Count() > 1) {
+                        //canSee++;
+                        continue;
+                    }
+
+                    int val = Get(i,j).Values.First();
+                    if (val > maxSeen) {
+                        maxSeen = val;
+                        canSee++;
+                    }
+                }
+                if (canSee > toSee) return false;
+            }
+
+            //  bottom row
+            for (int i = 0; i < 6; i++) {
+
+                int toSee = clues.Get(i,6).Val;
+                if (toSee == 0) continue;
+
+                int canSee = 0;
+                int maxSeen = 0;
+                for (int j = 5; j >= 0; j--) {
+
+                    if (Get(i,j).Values.Count() > 1) {
+                        //canSee++;
+                        continue;
+                    }
+
+                    int val = Get(i,j).Values.First();
+                    if (val > maxSeen) {
+                        maxSeen = val;
+                        canSee++;
+                    }
+                }
+                if (canSee > toSee) return false;
+            }
+
+            // left col
+            for (int i = 0; i < 6; i++) {
+
+                int toSee = clues.Get(-1,i).Val;
+                if (toSee == 0) continue;
+
+                int canSee = 0;
+                int maxSeen = 0;
+                for (int j = 0; j < 6; j++) {
+
+                    if (Get(j,i).Values.Count() > 1) {
+                        //canSee++;
+                        continue;
+                    }
+
+                    int val = Get(j,i).Values.First();
+                    if (val > maxSeen) {
+                        maxSeen = val;
+                        canSee++;
+                    }
+                }
+                if (canSee > toSee) return false;
+            }
+
+            //right col
+            for (int i = 0; i < 6; i++) {
+
+                int toSee = clues.Get(6,i).Val;
+                if (toSee == 0) continue;
+
+                int canSee = 0;
+                int maxSeen = 0;
+                for (int j = 5; j >= 0; j--) {
+
+                    if (Get(j,i).Values.Count() > 1) {
+                        //canSee++;
+                        continue;
+                    }
+
+                    int val = Get(j,i).Values.First();
+                    if (val > maxSeen) {
+                        maxSeen = val;
+                        canSee++;
+                    }
+                }
+                if (canSee > toSee) return false;
+            }
+
+
+            return true;
         }
     }
 
