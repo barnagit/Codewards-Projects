@@ -15,71 +15,10 @@ namespace Six_by_six_Skyscrapers
             c = new Clues(clues);
             m = new Matrix();
 
-            #region remove the obvious
-            for (int i = 0; i < 6; i++) {
+            m.ApplyRules(c);
+            m.CleanUp();
 
-                // iterate on columns
-                int vTop = c.Get(i,-1).Val;
-                int vBottom = c.Get(i,6).Val;
-
-                if (vTop == 6) 
-                    for (int j = 0; j < 6; j++) 
-                        m.Get(i,j).Values.RemoveAll(s => s != j + 1);
-                else if (vTop < 6 && vTop > 1)
-                    for (int j = 0; j < 6; j++)
-                        m.Get(i,j).Values.RemoveAll(s => s > 7-vTop + j);
-                else if (vTop == 1) {
-                    m.Get(i,0).Values.RemoveAll(s => s != 6);
-                    for (int j = 1; j < 6; j++)
-                        m.Get(i,j).Values.Remove(6);
-                }
-
-                if (vBottom == 6)
-                    for (int j = 0; j < 6; j++)
-                        m.Get(i,5-j).Values.RemoveAll(s => s != j + 1);
-                else if (vBottom < 6 && vBottom > 1)
-                    for (int j = 0; j < 6; j++)
-                       m.Get(i,5-j).Values.RemoveAll(s => s > 7-vBottom + j);
-                else if (vBottom == 1) {
-                    m.Get(i,5).Values.RemoveAll(s => s != 6);
-                    for (int j = 1; j < 6; j++)
-                        m.Get(i,5-j).Values.Remove(6);
-                }
-
-                // iterate on rows.
-                int vRight = c.Get(6,i).Val;
-                int vLeft = c.Get(-1,i).Val;
-
-                if (vRight == 6)
-                    for (int j=0; j<6; j++)
-                        m.Get(5-j,i).Values.RemoveAll(s => s != j + 1);
-                else if (vRight < 6 && vRight > 1) 
-                    for (int j = 0; j < 6; j++)
-                        m.Get(5-j,i).Values.RemoveAll(s => s > 7-vRight + j);
-                else if (vRight == 1) {
-                    m.Get(5,i).Values.RemoveAll(s => s != 6);
-                    for (int j = 1; j < 6; j++)
-                        m.Get(5-j,i).Values.Remove(6);
-                }
-
-                if (vLeft == 6)
-                    for (int j = 0; j < 6; j ++)
-                        m.Get(j,i).Values.RemoveAll(s => s != j + 1);
-                else if (vLeft <6 && vLeft > 1)
-                    for (int j = 0; j < 6;j++)
-                        m.Get(j,i).Values.RemoveAll(s => s > 7-vLeft + j);
-                else if (vLeft == 1) {
-                    m.Get(0,i).Values.RemoveAll(s => s != 6);
-                    for (int j = 1; j <6; j++) 
-                        m.Get(j,i).Values.Remove(6); 
-                }
-
-            }
-            #endregion
             
-            CleanUp(m);
-
-            //Console.WriteLine(m);
             
             int k = 0;
             if (m.Cells.Count(c => c.Values.Count() > 1) > 0) 
@@ -98,7 +37,7 @@ namespace Six_by_six_Skyscrapers
 
         static bool Guess(Matrix origin, int skip, int level = 0) {
 
-/*             string[] spaces = new string[skip];
+/*          string[] spaces = new string[skip];
             for (int spacesIndex = 0; spacesIndex < spaces.Length; spacesIndex++) spaces[spacesIndex] = "-";
             Console.WriteLine("{0}{1}",String.Join("",spaces), level); */
 
@@ -122,7 +61,7 @@ namespace Six_by_six_Skyscrapers
             cell.Values.RemoveAll(v => v != myValue);
 
             // calculate until possible
-            CleanUp(matrix);
+            matrix.CleanUp();
 
             //Console.WriteLine(matrix.ToString());
 
@@ -144,79 +83,6 @@ namespace Six_by_six_Skyscrapers
             return false;
         }
 
-        static void CleanUp(Matrix m) 
-        {
-            #region find single present items
-                // in every row find the number which is present only in one cell of that row
-
-                // take every row
-                for (int i = 0; i < 6; i++) {
-                    // for every number take..
-                    for (int n = 1; n < 7; n++) {
-                        int c = 0;
-                        int col = -1;
-                        // count them through columns
-                        for (int j = 0; j < 6; j++) {
-                            if(m.Get(j,i).Values.Contains(n)) {
-                                c++;
-                                col = j;
-                            }
-                        }
-
-                        // and if it is present only once
-                        if (c == 1) {
-                            // remove every other number from that cell.
-                            m.Get(col, i).Values.RemoveAll(s => s != n);
-                        }
-                    }
-                }
-
-
-                // in every col find the number which is present only in one cell of that col
-
-                // take every col
-                for (int j = 0; j < 6; j++) {
-                    // for every number take...
-                    for (int n = 1; n <7; n++) {
-                        int c = 0;
-                        int row = -1;
-                        // count them through the rows
-                        for (int i = 0; i < 6; i++) {
-                            if (m.Get(j,i).Values.Contains(n)) {
-                                c++;
-                                row = i;
-                            }
-                        }
-
-                        // and if it is present only once
-                        if (c == 1) {
-                            // remove every other number from that cell.
-                            m.Get(j, row).Values.RemoveAll(s => s != n);
-                        }
-                    }
-                }
-
-            #endregion
-
-            #region find lone items
-
-            // after removal find thos cells have only one item in it
-            // and remove that number from the row and col the cell is sitting in
-
-            bool didWeRemoveAnything = false;
-            for (int col = 0; col < 6; col++) 
-                for (int row = 0; row < 6; row++)
-                    if (m.Get(col,row).Values.Count == 1) {
-                        for (int i = 0; i < 6; i++) {
-                            if (i != col) if (m.Get(i,row).Values.Remove(m.Get(col,row).Values.First())) didWeRemoveAnything = true;
-                            if (i != row) if(m.Get(col,i).Values.Remove(m.Get(col,row).Values.First())) didWeRemoveAnything = true;;
-                        }
-                    }
-                         
-            if (didWeRemoveAnything) CleanUp(m);
-
-            #endregion
-        }
     }
 
     class Clues
@@ -423,6 +289,161 @@ namespace Six_by_six_Skyscrapers
 
 
             return true;
+        }
+    
+        public void ApplyRules(Clues clues) {
+            
+            /*
+             rules to apply:
+             - if the clue is 6 => it cannot be other than 1,2,3,4,5,6 in a row
+             - if the clue is 2,3,4,5 => remove the highs close to the clue
+             - if the clue is 1 => the closest cell is 6
+             - if the clue is 1 => remove 5 from the 2nd neighbour
+             */
+
+            for (int i = 0; i < 6; i++)
+            {
+                // iterate on columns
+                int vTop = clues.Get(i,-1).Val;
+                int vBottom = clues.Get(i,6).Val;
+
+                
+                if (vTop == 6) 
+                    for (int j = 0; j < 6; j++) 
+                        Get(i,j).Values.RemoveAll(s => s != j + 1);
+                
+                else if (vTop < 6 && vTop > 1) {
+                    for (int j = 0; j < 6; j++)
+                        Get(i,j).Values.RemoveAll(s => s > 7-vTop + j);
+                    if (vTop == 2) Get(i,1).Values.Remove(5);
+                }
+                
+                else if (vTop == 1) {
+                    Get(i,0).Values.RemoveAll(s => s != 6);
+                    for (int j = 1; j < 6; j++)
+                        Get(i,j).Values.Remove(6);
+                }
+
+                if (vBottom == 6)
+                    for (int j = 0; j < 6; j++)
+                        Get(i,5-j).Values.RemoveAll(s => s != j + 1);
+                else if (vBottom < 6 && vBottom > 1) {
+                    for (int j = 0; j < 6; j++)
+                       Get(i,5-j).Values.RemoveAll(s => s > 7-vBottom + j);
+                    if (vBottom == 2) Get(i,4).Values.Remove(5);
+                }
+                else if (vBottom == 1) {
+                    Get(i,5).Values.RemoveAll(s => s != 6);
+                    for (int j = 1; j < 6; j++)
+                        Get(i,5-j).Values.Remove(6);
+                }
+
+                // iterate on rows.
+                int vRight = clues.Get(6,i).Val;
+                int vLeft = clues.Get(-1,i).Val;
+
+                if (vRight == 6)
+                    for (int j=0; j<6; j++)
+                        Get(5-j,i).Values.RemoveAll(s => s != j + 1);
+                else if (vRight < 6 && vRight > 1) {
+                    for (int j = 0; j < 6; j++)
+                        Get(5-j,i).Values.RemoveAll(s => s > 7-vRight + j);
+                    if (vRight == 2) Get(4,i).Values.Remove(5);
+                }
+                else if (vRight == 1) {
+                    Get(5,i).Values.RemoveAll(s => s != 6);
+                    for (int j = 1; j < 6; j++)
+                        Get(5-j,i).Values.Remove(6);
+                }
+
+                if (vLeft == 6)
+                    for (int j = 0; j < 6; j ++)
+                        Get(j,i).Values.RemoveAll(s => s != j + 1);
+                else if (vLeft <6 && vLeft > 1) {
+                    for (int j = 0; j < 6;j++)
+                        Get(j,i).Values.RemoveAll(s => s > 7-vLeft + j);
+                    if (vLeft == 2) Get(1,i).Values.Remove(5);
+                }
+                else if (vLeft == 1) {
+                    Get(0,i).Values.RemoveAll(s => s != 6);
+                    for (int j = 1; j <6; j++) 
+                        Get(j,i).Values.Remove(6); 
+                }
+
+            }
+        }
+
+        public void CleanUp() {
+            FindSingles();
+            CleanUpAfterSingles();
+        }
+
+        private void FindSingles() {
+            // in every row find the number which is present only in one cell of that row
+
+            // take every row
+            for (int i = 0; i < 6; i++) {
+                // for every number take..
+                for (int n = 1; n < 7; n++) {
+                    int c = 0;
+                    int col = -1;
+                    // count them through columns
+                    for (int j = 0; j < 6; j++) {
+                        if(Get(j,i).Values.Contains(n)) {
+                            c++;
+                            col = j;
+                        }
+                    }
+
+                    // and if it is present only once
+                    if (c == 1) {
+                        // remove every other number from that cell.
+                        Get(col, i).Values.RemoveAll(s => s != n);
+                    }
+                }
+            }
+
+
+            // in every col find the number which is present only in one cell of that col
+
+            // take every col
+            for (int j = 0; j < 6; j++) {
+                // for every number take...
+                for (int n = 1; n <7; n++) {
+                    int c = 0;
+                    int row = -1;
+                    // count them through the rows
+                    for (int i = 0; i < 6; i++) {
+                        if (Get(j,i).Values.Contains(n)) {
+                            c++;
+                            row = i;
+                        }
+                    }
+
+                    // and if it is present only once
+                    if (c == 1) {
+                        // remove every other number from that cell.
+                        Get(j, row).Values.RemoveAll(s => s != n);
+                    }
+                }
+            }
+        }
+    
+        private bool CleanUpAfterSingles() {
+            // after removal find those cells have only one item in it
+            // and remove that number from the row and col the cell is sitting in
+
+            bool didWeRemoveAnything = false;
+            for (int col = 0; col < 6; col++) 
+                for (int row = 0; row < 6; row++)
+                    if (Get(col,row).Values.Count == 1) {
+                        for (int i = 0; i < 6; i++) {
+                            if (i != col) if (Get(i,row).Values.Remove(Get(col,row).Values.First())) didWeRemoveAnything = true;
+                            if (i != row) if(Get(col,i).Values.Remove(Get(col,row).Values.First())) didWeRemoveAnything = true;;
+                        }
+                    }
+                         
+            return didWeRemoveAnything;
         }
     }
 
