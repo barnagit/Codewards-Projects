@@ -18,8 +18,6 @@ namespace Six_by_six_Skyscrapers
             m.ApplyRules(c);
             m.CleanUp();
 
-            
-            
             int k = 0;
             if (m.Cells.Count(c => c.Values.Count() > 1) > 0) 
                 while (m.Cells.Aggregate(0,(i,c) => i+c.Values.Count()) > k
@@ -159,6 +157,7 @@ namespace Six_by_six_Skyscrapers
             return n;
         }
 
+        /* Investigates if the matrix has no dupes as well as all the number occurs in any rows or cols */
         public bool IsValid()
         {
             for (int i = 0; i < 6; i++) {
@@ -168,10 +167,13 @@ namespace Six_by_six_Skyscrapers
                     if (Get(j,i).Values.Count() == 1) rowVals[j] = Get(j,i).Values.First();
                     if (Get(i,j).Values.Count() == 1) colVals[j] = Get(i,j).Values.First();
                 }
-                if (rowVals.Where(v => v > 0).GroupBy(key => key).Count(g => g.Count()>1) > 1)
+                // if there is a row where a lone number occurs twice or more
+                // or there is a col where a lone number occurs twice or more
+                // the matrix is invalid
+                if (rowVals.Where(v => v > 0).GroupBy(key => key).Count(g => g.Count()>1) > 1 
+                || colVals.Where(v => v > 0).GroupBy(key => key).Count(g => g.Count()>1) > 1)
                     return false;
-                if (colVals.Where(v => v > 0).GroupBy(key => key).Count(g => g.Count()>1) > 1)
-                    return false;
+                
 
                 rowVals = new int[0];
                 colVals = new int[0];
@@ -180,7 +182,8 @@ namespace Six_by_six_Skyscrapers
                     rowVals = rowVals.Concat(Get(j,i).Values).ToArray();
                     colVals = colVals.Concat(Get(i,j).Values).ToArray();
                 }
-
+                // if any of the six number is missing either from a row or a list
+                // the matrix is invalid
                 if (!rowVals.Distinct().OrderBy(a=>a).SequenceEqual(new int[]{1,2,3,4,5,6}) 
                     || !colVals.Distinct().OrderBy(a=>a).SequenceEqual(new int[]{1,2,3,4,5,6}))
                     return false;
@@ -189,6 +192,7 @@ namespace Six_by_six_Skyscrapers
             return true;
         }
 
+        /* Invesigates if the matrix is correct against the clues */
         public bool IsCorrect(Clues clues) 
         {
             // top row
