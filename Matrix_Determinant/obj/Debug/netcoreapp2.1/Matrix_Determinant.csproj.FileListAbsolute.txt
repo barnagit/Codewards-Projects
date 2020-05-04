@@ -1,0 +1,14 @@
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\bin\Debug\netcoreapp2.1\Matrix_Determinant.deps.json
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\bin\Debug\netcoreapp2.1\Matrix_Determinant.runtimeconfig.json
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\bin\Debug\netcoreapp2.1\Matrix_Determinant.runtimeconfig.dev.json
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\bin\Debug\netcoreapp2.1\Matrix_Determinant.dll
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\bin\Debug\netcoreapp2.1\Matrix_Determinant.pdb
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\obj\Debug\netcoreapp2.1\Matrix_Determinant.csprojAssemblyReference.cache
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\obj\Debug\netcoreapp2.1\Matrix_Determinant.csproj.CoreCompileInputs.cache
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\obj\Debug\netcoreapp2.1\Matrix_Determinant.AssemblyInfoInputs.cache
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\obj\Debug\netcoreapp2.1\Matrix_Determinant.AssemblyInfo.cs
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\obj\Debug\netcoreapp2.1\Matrix_Determinant.dll
+c:\Users\barna\Projects\Codewards-Projects\Matrix_Determinant\obj\Debug\netcoreapp2.1\Matrix_Determinant.pdb
