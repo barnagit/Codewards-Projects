@@ -1,0 +1,14 @@
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\obj\Debug\netcoreapp2.1\All Balanced Parentheses.csprojAssemblyReference.cache
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\obj\Debug\netcoreapp2.1\All Balanced Parentheses.csproj.CoreCompileInputs.cache
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\obj\Debug\netcoreapp2.1\All Balanced Parentheses.AssemblyInfoInputs.cache
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\obj\Debug\netcoreapp2.1\All Balanced Parentheses.AssemblyInfo.cs
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\bin\Debug\netcoreapp2.1\All Balanced Parentheses.deps.json
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\bin\Debug\netcoreapp2.1\All Balanced Parentheses.runtimeconfig.json
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\bin\Debug\netcoreapp2.1\All Balanced Parentheses.runtimeconfig.dev.json
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\bin\Debug\netcoreapp2.1\All Balanced Parentheses.dll
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\bin\Debug\netcoreapp2.1\All Balanced Parentheses.pdb
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\obj\Debug\netcoreapp2.1\All Balanced Parentheses.dll
+c:\Users\barna\Projects\Codewards-Projects\All Balanced Parentheses\obj\Debug\netcoreapp2.1\All Balanced Parentheses.pdb
